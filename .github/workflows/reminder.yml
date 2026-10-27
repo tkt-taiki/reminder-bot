@@ -14,6 +14,7 @@ jobs:
   send-reminders:
     runs-on: ubuntu-latest
     env:
+      SCHEDULE_CRON: ${{ github.event.schedule }} 
       WEBHOOK_HITOKU: ${{ secrets.WEBHOOK_HITOKU }}
       WEBHOOK_FTQC: ${{ secrets.WEBHOOK_FTQC }}
       WEBHOOK_NEDO: ${{ secrets.WEBHOOK_NEDO }}
